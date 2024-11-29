@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Proposal</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@400;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title">Will You Marry Me, Zainab?</h1>
+        <div class="proposal-buttons">
+            <button class="yes-button" id="yes-button">Yes</button>
+            <button class="no-button" id="no-button">No</button>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with love by Nazzal</p>
+    </footer>
+
+    <script>
+        const yesButton = document.getElementById('yes-button');
+        const noButton = document.getElementById('no-button');
+
+        yesButton.addEventListener('click', () => {
+            // Trigger romantic animation, then go to the gallery after a short delay
+            setTimeout(() => {
+                window.location.href = '/gallery';  // Navigate to the gallery page after 5 seconds
+            }, 5000); // Delay to simulate animation time
+        });
+
+        // Move "No" button when hovered
+        noButton.addEventListener('mouseenter', () => {
+            noButton.style.position = 'absolute';
+            noButton.style.top = `${Math.random() * 50 + 10}px`;  // Random vertical position
+            noButton.style.left = `${Math.random() * 200 + 10}px`;  // Random horizontal position
+        });
+    </script>
+</body>
+
+</html>

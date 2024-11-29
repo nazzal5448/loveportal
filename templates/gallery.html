@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Gallery</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Playfair+Display:wght@400;700&family=Merriweather:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+
+<body>
+    <div class="container gallery-container">
+        <h1 class="title">Our Beautiful Moments</h1>
+        <div class="gallery">
+            <!-- Gallery Images -->
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/photo1.jpg') }}" alt="Image 1"
+                    class="gallery-thumbnail">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/photo2.jpg') }}" alt="Image 2"
+                    class="gallery-thumbnail">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/photo3.jpg') }}" alt="Image 3"
+                    class="gallery-thumbnail">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/photo4.jpg') }}" alt="Image 4"
+                    class="gallery-thumbnail">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/photo5.jpg') }}" alt="Image 5"
+                    class="gallery-thumbnail">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/photo6.jpg') }}" alt="Image 6"
+                    class="gallery-thumbnail">
+            </div>
+            <div class="gallery-item">
+                <img src="{{ url_for('static', filename='images/photo7.png') }}" alt="Image 7"
+                    class="gallery-thumbnail">
+            </div>
+            <!-- Add more items here -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>Made with love by Nazzal</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/lightbox.js') }}"></script>
+</body>
+
+</html>
